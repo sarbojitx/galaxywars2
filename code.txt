@@ -1,0 +1,107 @@
+sketch.js:
+const Engine= Matter.Engine;
+const World=Matter.World;
+const Bodies=Matter.Bodies;
+var ground,me;
+
+function preload(){
+ground_image=loadImage("space1.png","space2.webp");
+
+}
+
+function setup(){
+    var canvas = createCanvas(displayWidth,displayHeight);
+    engine = Engine.create();
+    world = engine.world;
+   
+    e1= new enemy(200,200,40,40);
+    
+    me = new heroship(200,50,50,50);
+ 
+
+}
+
+function draw(){
+  Engine.update(engine);
+    background(ground_image);
+    background.velocityY=6;
+    if (background.y>400){
+      background.y=300;
+    }
+    
+    e1.display():
+    me.display();
+    
+
+}
+
+heroship.js:
+class heroship extends BaseClass {
+    constructor(x,y){
+      super(x,y,50,50);
+      this.image = loadImage("heroshipfinal.png");
+      
+    }
+  
+    display() {
+      
+  
+      super.display();
+  
+      if (keyDown("right")){
+        this.body.velocityX=3;
+      }
+      if (keyDown("left")){
+        this.body.velocityX=-3;
+      }
+      
+     
+      }
+    }
+  
+enemy.js:
+class enemy extends BaseClass {
+    constructor(x, y){
+      super(x,y,50,50);
+      this.image = loadImage("enemy.jpg");
+      this.body(Math.round(random(0,400)),Math.round(random(0,400)));
+    
+    }
+  
+   display(){
+     super.display();
+      image("enemy.jpg",200,300,40,40);
+      
+   
+     }
+     
+   }
+  
+  BaseClass.js:class BaseClass{
+    constructor(x, y, width, height, angle) {
+        var options = {
+             isStatic:true,
+            restitution:0.8,
+            friction:1.0,
+            density:1.0
+        }
+        this.body = Bodies.rectangle(x, y, width, height, options);
+        this.width = width;
+        this.height = height;
+        this.image = loadImage("sprites/base.png");
+        World.add(world, this.body);
+      }
+      display(){
+        var angle = this.body.angle;
+        push();
+        translate(this.body.position.x, this.body.position.y);
+        rotate(angle);
+        imageMode(CENTER);
+        image(this.image, 0, 0, this.width, this.height);
+        pop();
+      }
+}
+
+  
+  
+  

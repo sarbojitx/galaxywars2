@@ -1,0 +1,4 @@
+1. Give Background(make it move downwards so it looks like the ship is moving)
+2. Make enemy class(random spawning places,speed and life expectancy, firing rate and damage)
+3. Make the playing character class(firing rate and damage,life expectancy, moving direction and velocity)
+4. Figure out how to increase the difficulty level(increasing the firing rate of enemy, spawning more enemies, more asteroids)

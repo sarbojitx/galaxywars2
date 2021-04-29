@@ -1,0 +1,12 @@
+STAR WARS
+
+playing characters: Falcon 360
+Non-playing characters: enemy UFOs, asteroids, BIG BOSS
+
+Rule:The Falcon 360 can move left or right but not forward. It can shoot laser from its guns and it has to dodge or destroy enemy UFOs and asteroids.
+
+Goal: The Falcon 360 has to destroy the enemy UFOs and the BIG BOSS in order to save the galaxy
+
+Story: The enemy UFOs are destroying the planets of our galaxy, Falcon 360 has taken the initiative to destroy all the enemy UFOs to bring back peace to our galaxy. There will be 3 levels. At the end of each level there will be a 
+boss UFO which can move unlike the other UFOs, it will be much harder to destroy this UFO because it would take numerous hits to destroy it. At the end of the 3rd level, there will be the king of the enemies who will have 
+the largest UFO of all, only after destroying  this spaceship will we win.
